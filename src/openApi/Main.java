@@ -11,7 +11,7 @@ public class Main {
 		
 		AsosDalyInfoService dalyInfoService = new AsosDalyInfoService();
 		AsosHourlyInfoService hourlyInfoService = new AsosHourlyInfoService();
-		
+		 
 		try {
 //			dalyInfoService.dalyInfoService(serviceKey);	//기상청_지상(종관, ASOS) 일자료 조회서비스
 			hourlyInfoService.hourlyInfoService(serviceKey);	//기상청_지상(종관, ASOS) 시간자료 조회서비스
