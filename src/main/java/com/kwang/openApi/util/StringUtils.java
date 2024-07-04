@@ -1,4 +1,4 @@
-package openApi.utils;
+package main.java.com.kwang.openApi.util;
 
 public class StringUtils {
 	

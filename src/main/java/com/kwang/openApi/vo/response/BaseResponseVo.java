@@ -1,4 +1,4 @@
-package openApi.vo.response;
+package main.java.com.kwang.openApi.vo.response;
 
 import lombok.Data;
 

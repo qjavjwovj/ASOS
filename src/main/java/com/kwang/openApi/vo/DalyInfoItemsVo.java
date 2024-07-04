@@ -1,4 +1,4 @@
-package openApi.vo;
+package main.java.com.kwang.openApi.vo;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package openApi.utils;
+package main.java.com.kwang.openApi.util;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,7 +11,7 @@ public class Utils {
 	public static String communicate(URL url, String method, String contentType) throws IOException {
 		
 		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-        conn.setRequestMethod(method);	//¿äÃ»¹æ½Ä ¼ÂÆÃ
+        conn.setRequestMethod(method);	//ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         conn.setRequestProperty("Content-type", contentType);
         
         System.out.println("Response code: " + conn.getResponseCode());
@@ -21,18 +21,18 @@ public class Utils {
         
         try {
         	
-        	/* ÀÀ´äÀÌ ¼º°øÀÎ °æ¿ì */
+        	/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ */
         	if(conn.getResponseCode() >= 200 && conn.getResponseCode() <= 300) {
         		rd = new BufferedReader(new InputStreamReader(conn.getInputStream(), "UTF-8"));
         	}
-        	/* ÀÀ´äÀÌ ½ÇÆÐÀÎ °æ¿ì */
+        	/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ */
         	else {
         		rd = new BufferedReader(new InputStreamReader(conn.getErrorStream(), "UTF-8"));
         	}
         	
         	String line;
         	
-        	/* BufferedReader¿¡¼­ µ¥ÀÌÅÍ ÇÑÁÙ¾¿ ÀÐ±â */
+        	/* BufferedReaderï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ù¾ï¿½ ï¿½Ð±ï¿½ */
         	while ((line = rd.readLine()) != null) {
         		sb.append(line);
         	}
@@ -40,7 +40,7 @@ public class Utils {
         } catch (Exception e) {
 			// TODO: handle exception
 		} finally {
-			/* ÀÚ¿ø ¹ÝÈ¯ ¹× Åë½Å Á¾·á */
+			/* ï¿½Ú¿ï¿½ ï¿½ï¿½È¯ ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 			rd.close();
 			conn.disconnect();
 		}

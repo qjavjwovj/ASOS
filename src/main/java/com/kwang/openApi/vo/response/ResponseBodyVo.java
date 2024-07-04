@@ -1,9 +1,9 @@
-package openApi.vo.response;
+package main.java.com.kwang.openApi.vo.response;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.Data;
-import openApi.vo.DalyInfoItemsVo;
+import main.java.com.kwang.openApi.vo.DalyInfoItemsVo;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
